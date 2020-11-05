@@ -6,9 +6,11 @@ $(document).ready(function () {
        event.preventDefault();
 
        var selectedClass = $("input[name=class]:checked").val();
+       var selectedColor = $("input[name=class]:checked").data('color');
        var firstName = $("input[name=name-first]").val();
        var lastName = $("input[name=name-last]").val();
+
        //display class
-       $("#displayClass").text("Welcome " + firstName + " " + lastName + ", the " + selectedClass + "!");
+       $("#displayClass").text("Welcome " + firstName + " " + lastName + ", the " + selectedClass + "!").css('color', selectedColor);
    }
 });
